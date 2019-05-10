@@ -54,6 +54,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\SelectedProjectChangedEventArgs.cs" />
+    <Compile Include="UI\UserControlProjectSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlProjectSelection.Designer.cs">
+      <DependentUpon>UserControlProjectSelection.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +73,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\UserControlProjectSelection.resx">
+      <DependentUpon>UserControlProjectSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\ProjectManagementTool.Data.Entities.Project.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,5 +90,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagementTool.Data\ProjectManagementTool.Data.csproj">
+      <Project>{76d589f9-79b0-4831-a48e-3069d25148a1}</Project>
+      <Name>ProjectManagementTool.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
